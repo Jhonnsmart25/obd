@@ -1,0 +1,17 @@
+{
+  "name": "traductor-obd",
+  "version": "1.0.0",
+  "description": "PWA que traduce los códigos de falla OBD-II a lenguaje sencillo, con prueba gratis de 7 días y suscripción con Stripe",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check server.js && node --check lib/store.js && node --check lib/auth.js && node --check public/app.js && node --check public/obd.js && node --check public/sw.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "stripe": "^16.12.0"
+  }
+}
